@@ -1,3 +1,19 @@
+"""
+@Author: Max Henson
+@Version: 1.0
+@Since: 10/3/2025
+
+Usage:
+    Handles database engine, session, and base model setup using SQLAlchemy. 
+    Provides dependency injection for DB sessions.
+
+Change Log:
+    Version 1.0 (10/3/2025): Initial creation
+"""
+
+
+
+
 # db.py - SQLAlchemy engine + session + Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
@@ -16,3 +32,4 @@ def get_db():
         yield db
     finally:
         db.close()
+
