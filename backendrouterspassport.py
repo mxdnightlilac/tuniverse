@@ -1,3 +1,14 @@
+/**
+Backend Passport Coding
+@Author: Tyler Tristan
+@Version: 1.0
+@Since: 10/03/2025
+Usage:
+Generate the user's customized music passport
+Change Log:
+Version 1.0 (10/03/2025):
+Created backend code for the music passport
+*/
 # routers/passport.py - generate music passport summary + image stub
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -36,3 +47,4 @@ def get_passport(user_id: str, db: Session = Depends(get_db)):
     image_path = os.path.join("share_images", f"passport_{passport.id}.png")
     # In real implementation: call render_passport_image()
     return passport
+
