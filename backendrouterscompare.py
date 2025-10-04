@@ -1,3 +1,17 @@
+"""
+@Author: Umaiza Azmat
+@Version: 1.0
+@Since: 10/3/2025
+
+Usage:
+    Enables user-to-user comparison of listening trends and artist overlaps.
+
+Change Log:
+    Version 1.0 (10/3/2025): Added comparison endpoint with overlap calculations.
+"""
+
+
+
 # routers/compare.py - community comparisons
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -34,3 +48,4 @@ def compare_with(user_id: str, friend_ids: List[str], db: Session = Depends(get_
     db.commit()
     db.refresh(comp)
     return comp
+
