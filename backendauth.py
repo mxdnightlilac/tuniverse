@@ -1,3 +1,23 @@
+"""
+@Author: Max Henson
+@Version: 1.0
+@Since: 10/3/2025
+
+Usage:
+    Provides authentication and security utilities for the backend.
+    Includes functions for:
+        • Password hashing and verification (using Passlib)
+        • JWT token creation and decoding
+        • Session expiration handling
+        • User authentication support for protected routes
+
+Change Log:
+    Version 1.0 (10/3/2025): Implemented core authentication utilities and JWT support
+"""
+
+
+
+
 # auth.py - simple auth helpers (password hashing + simple token)
 from passlib.context import CryptContext
 from datetime import datetime, timedelta
@@ -23,3 +43,4 @@ def create_access_token(subject: str, expires_delta: int = None) -> str:
 
 def decode_token(token: str) -> dict:
     return jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+
