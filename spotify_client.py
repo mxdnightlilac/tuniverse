@@ -1,3 +1,14 @@
+"""
+Get Spotify Access
+@Author: Emily Villareal
+@Version: 1.0
+@Since: 10/03/2025
+Usage:
+Get's user's spotify
+Change Log:
+Version 1.0 (10/03/2025):
+Gain spotify data for user
+"""
 import requests
 import os
 
@@ -11,3 +22,4 @@ def spotify_api_get(endpoint: str, token: str, params=None):
         return r.json()
     else:
         raise Exception(f"Spotify API error: {r.status_code} {r.text}")
+
