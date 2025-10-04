@@ -1,3 +1,14 @@
+"""
+Main Code Runner
+@Author: Emily Villareal
+@Version: 1.0
+@Since: 10/03/2025
+Usage:
+Main to run all the code
+Change Log:
+Version 1.0 (10/03/2025):
+Created main to run backend code
+"""
 from fastapi import FastAPI
 from .db import Base, engine
 from .routers import users, playlists, artists, passport, compare
@@ -17,3 +28,4 @@ app.include_router(compare.router, prefix="/compare", tags=["Comparisons"])
 @app.get("/")
 def root():
     return {"message": "Tuniverse backend running"}
+
