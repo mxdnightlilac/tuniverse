@@ -1,3 +1,14 @@
+"""
+Backend App Logic
+@Author: Jalen Counterman
+@Version: 1.0
+@Since: 10/03/2025
+Usage:
+Control data displayed specific to the user
+Change Log:
+Version 1.0 (10/03/2025):
+Created backend code for user data
+"""
 # schemas.py - pydantic models for requests/responses
 from pydantic import BaseModel, EmailStr
 from typing import List, Optional, Dict, Any
@@ -50,3 +61,4 @@ class PassportSummaryOut(BaseModel):
 
     class Config:
         orm_mode = True
+
