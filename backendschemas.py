@@ -1,5 +1,5 @@
 """
-Backend App Logic
+Backend User Data Logic
 @Author: Jalen Counterman
 @Version: 1.0
 @Since: 10/03/2025
@@ -61,4 +61,5 @@ class PassportSummaryOut(BaseModel):
 
     class Config:
         orm_mode = True
+
 
