@@ -1,3 +1,17 @@
+"""
+@Author: Tyler Tristan
+@Version: 1.0
+@Since: 10/03/2025
+
+Usage:
+    Manages artist metadata enrichment from Spotify and MusicBrainz APIs.
+
+Change Log:
+    Version 1.0 (10/03/2025): Implemented artist enrichment and artist listing endpoints.
+"""
+
+
+
 # routers/artists.py - enrichment & artist endpoints
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
 from sqlalchemy.orm import Session
@@ -61,3 +75,4 @@ def list_user_artists(user_id: str, db: Session = Depends(get_db)):
             artist_ids.add(a)
     artists = db.query(models.Artist).filter(models.Artist.spotify_artist_id.in_(list(artist_ids))).all() if artist_ids else []
     return [{"spotify_artist_id": a.spotify_artist_id, "name": a.name, "origin_country": a.origin_country, "coordinates": a.coordinates, "confidence": a.confidence} for a in artists]
+
