@@ -1,6 +1,6 @@
 """
 Backend Scheduler Coding
-@Author: Jalen Countermann
+@Author: Jalen Counterman
 @Version: 1.0
 @Since: 10/03/2025
 Usage:
@@ -28,4 +28,5 @@ def job_backup():
     # create DB dump / snapshot stub
     # In production: use pg_dump or cloud snapshot
     print("Running weekly backup (stub) - implement real backup in prod")
+
 
