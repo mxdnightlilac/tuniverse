@@ -1,3 +1,18 @@
+"""
+@Author: Tyler Tristan
+@Version: 1.0
+@Since: 10/03/2025
+
+Usage:
+    SQLAlchemy ORM models representing Tuniverse data schema:
+    Users, Playlists, Tracks, Artists, MusicPassportSummaries, Comparisons, ListeningHistory.
+
+Change Log:
+    Version 1.0 (10/3/2025): Created models aligned with PVD data definitions.
+"""
+
+
+
 # models.py - ORM models matching your pseudo-code
 import uuid
 from sqlalchemy import Column, String, Boolean, DateTime, Integer, ForeignKey, JSON, Table, Text
@@ -86,3 +101,4 @@ class ListeningHistory(Base):
     track_name = Column(String)
     artist_id = Column(String)
     played_at = Column(DateTime, nullable=True)
+
