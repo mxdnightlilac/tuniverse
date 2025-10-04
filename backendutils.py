@@ -1,3 +1,14 @@
+"""
+Backend geocoding
+@Author: Umaiza Azmat
+@Version: 1.0
+@Since: 10/03/2025
+Usage:
+Get approximate location and country data
+Change Log:
+Version 1.0 (10/03/2025):
+Created backend code helper for geocoding
+"""
 # utils.py - small helpers for enrichment and geocoding (stubs)
 import time
 from typing import Optional, Dict
@@ -19,3 +30,4 @@ def geocode_country(country_name: str) -> Optional[Dict]:
 
 def now_iso():
     return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
