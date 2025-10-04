@@ -1,3 +1,14 @@
+"""
+Model List Code
+@Author: Emily Villareal
+@Version: 1.0
+@Since: 10/03/2025
+Usage:
+Contains all the models needed
+Change Log:
+Version 1.0 (10/03/2025):
+Created models for code usage
+"""
 from sqlalchemy import Column, String, Boolean, DateTime, Integer, ForeignKey, JSON
 from sqlalchemy.dialects.postgresql import UUID, ARRAY
 from sqlalchemy.orm import relationship
@@ -56,3 +67,4 @@ class Artist(Base):
     last_checked_at = Column(DateTime)
 
 # Add MusicPassportSummary, Comparison, ListeningHistory in the same style
+
