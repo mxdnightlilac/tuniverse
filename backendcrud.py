@@ -1,13 +1,13 @@
 """
 @Author: Max Henson
 @Version: 1.0
-@Since: 10/03/2025
+@Since: 10/3/2025
 
 Usage:
     CRUD (Create, Read, Update, Delete) operations for database models.
 
 Change Log:
-    Version 1.0 (10/03/2025): Implemented create/get/update helpers for all key entities.
+    Version 1.0 (10/3/2025): Implemented create/get/update helpers for all key entities.
 """
 
 
@@ -70,4 +70,5 @@ def create_passport(db: Session, user_id: str, country_counts: dict, region_perc
     db.commit()
     db.refresh(p)
     return p
+
 
