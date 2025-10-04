@@ -1,3 +1,21 @@
+"""
+@Author: Max Henson
+@Version: 1.0
+@Since: 10/3/2025
+
+Usage:
+    Manages user authentication (password hashing, JWT creation, verification). 
+    Supports secure login sessions and authorization.
+
+Change Log:
+    Version 1.0 (10/3/2025): Initial creation
+"""
+
+
+
+
+
+
 from fastapi import Depends, HTTPException
 from passlib.hash import bcrypt
 from jose import jwt
@@ -19,3 +37,4 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
     expire = datetime.utcnow() + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
     to_encode.update({"exp": expire})
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+
