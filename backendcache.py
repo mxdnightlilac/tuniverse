@@ -1,3 +1,18 @@
+"""
+@Author: Max Henson
+@Version: 1.0
+@Since: 10/3/2025
+
+Usage:
+    Simple in-memory cache implementation 
+
+Change Log:
+    Version 1.0 (10/3/2025): Added get/set/delete with TTL support.
+"""
+
+
+
+
 # cache.py - very small in-memory cache fallback (use redis in prod)
 import time
 
@@ -20,3 +35,4 @@ class SimpleCache:
             del self.store[key]
 
 cache = SimpleCache()
+
