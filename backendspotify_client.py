@@ -1,3 +1,14 @@
+"""
+Backend App Logic
+@Author: Umaiza Azmat
+@Version: 1.0
+@Since: 10/03/2025
+Usage:
+Embed and secure spotify data
+Change Log:
+Version 1.0 (10/03/2025):
+Created backend code to embed spotify data
+"""
 # spotify_client.py - minimal wrapper + token refresh stub
 import requests
 import os
@@ -26,3 +37,4 @@ def refresh_spotify_token(refresh_token: str) -> Optional[dict]:
         return r.json()
     else:
         return None
+
