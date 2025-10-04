@@ -1,3 +1,17 @@
+"""
+@Author: Max Henson
+@Version: 1.0
+@Since: 10/03/2025
+
+Usage:
+    CRUD (Create, Read, Update, Delete) operations for database models.
+
+Change Log:
+    Version 1.0 (10/03/2025): Implemented create/get/update helpers for all key entities.
+"""
+
+
+
 # crud.py - basic DB operations used by routers
 from sqlalchemy.orm import Session
 from . import models
@@ -56,3 +70,4 @@ def create_passport(db: Session, user_id: str, country_counts: dict, region_perc
     db.commit()
     db.refresh(p)
     return p
+
