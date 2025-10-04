@@ -1,0 +1,19 @@
+from fastapi import FastAPI
+from .db import Base, engine
+from .routers import users, playlists, artists, passport, compare
+
+app = FastAPI(title="Tuniverse Backend")
+
+# DB init
+Base.metadata.create_all(bind=engine)
+
+# Routers
+app.include_router(users.router, prefix="/users", tags=["Users"])
+app.include_router(playlists.router, prefix="/playlists", tags=["Playlists"])
+app.include_router(artists.router, prefix="/artists", tags=["Artists"])
+app.include_router(passport.router, prefix="/passport", tags=["Music Passport"])
+app.include_router(compare.router, prefix="/compare", tags=["Comparisons"])
+
+@app.get("/")
+def root():
+    return {"message": "Tuniverse backend running"}
