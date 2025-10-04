@@ -1,3 +1,14 @@
+"""
+Main user data schema
+@Author: Emily Villareal
+@Version: 1.0
+@Since: 10/03/2025
+Usage:
+Main code to run user backend codes
+Change Log:
+Version 1.0 (10/03/2025):
+Created main to handle user data
+"""
 from pydantic import BaseModel, EmailStr
 from typing import List, Optional
 from datetime import datetime
@@ -23,3 +34,4 @@ class PlaylistOut(BaseModel):
     name: str
     track_count: int
     last_synced_at: Optional[datetime]
+
