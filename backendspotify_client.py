@@ -1,5 +1,5 @@
 """
-Backend App Logic
+Backend Spotify Logic
 @Author: Umaiza Azmat
 @Version: 1.0
 @Since: 10/03/2025
@@ -37,4 +37,5 @@ def refresh_spotify_token(refresh_token: str) -> Optional[dict]:
         return r.json()
     else:
         return None
+
 
