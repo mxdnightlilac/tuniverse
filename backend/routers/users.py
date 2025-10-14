@@ -9,7 +9,7 @@ Manage user registration, login, and spotify authentication
 Change Log:
 Version 1.0 (10/03/2025):
 Created backend code for user data
-
+"""
 
 
 # routers/users.py - registration, login, spotify oauth endpoints
@@ -57,4 +57,5 @@ def spotify_callback(payload: Dict, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="User not found")
     crud.set_spotify_tokens(db, user, access, refresh)
     return {"status": "ok", "user_id": user_id}
+
 
