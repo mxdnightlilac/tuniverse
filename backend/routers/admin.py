@@ -1,3 +1,17 @@
+"""
+@Author: Max Henson
+@Version: 1.0
+@Since: 10/3/2025
+
+Usage:
+    Admin-only endpoints for system metrics and user data purging.
+
+Change Log:
+    Version 1.0 (10/3/2025): Implemented /status and /user/{id} delete routes.
+"""
+
+
+
 # routers/admin.py - admin utilities
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -24,4 +38,5 @@ def purge_user(user_id: str, db: Session = Depends(get_db)):
     db.query(models.User).filter(models.User.id == user_id).delete()
     db.commit()
     return {"status": "deleted", "user_id": user_id}
+
 
