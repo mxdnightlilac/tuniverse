@@ -9,6 +9,9 @@ Change Log:
 Version 1.0 (10/03/2025):
 Created backend code for the playlist history
 """
+
+
+
 # routers/playlists.py - import & sync playlists, import listening history
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
 from sqlalchemy.orm import Session
@@ -85,5 +88,4 @@ def _import_history(user_id: str):
         db.add(lh)
     db.commit()
     db.close()
-
 

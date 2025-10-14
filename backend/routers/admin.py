@@ -39,3 +39,4 @@ def purge_user(user_id: str, db: Session = Depends(get_db)):
     db.commit()
     return {"status": "deleted", "user_id": user_id}
 
+
